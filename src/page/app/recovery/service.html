@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<title></title>
+	<link rel='stylesheet' href='/src/assets/css/recovery/common.css'>
+</head>
+<body>
+	<div id='main'>
+		<header>
+			<div class='back' onclick='CommonUtils.goBack()'>
+				<img src='/src/assets/img/common/back.png'/>
+			</div>
+			<span id='title'></span>
+		</header>
+		<div id='info' style='display:none;'>
+			<p id='price' style='display:none;'></p>
+            <p class='item'>
+                <span>预约项目 : </span>
+                <span id='projectName'></span>
+            </p>
+            <p class='item'>
+                <span>预约时间 : </span>
+                <span id='appointTime'></span>
+            </p>
+            <p class='item'>
+                <span>服务方式 : </span>
+                <span id='serviceType'></span>
+            </p>
+            <p class='item'>
+				<span id='addressLabel'></span>
+                <span id='address'></span>
+			</p>
+		</div>
+		<div id='payType' style='display:none;'>
+			<div id='wechatpay' class='payType' onclick='setCheck("1")'>
+				<img src='/src/assets/img/common/wechatpay.png'>
+				<span>微信支付</span>
+				<img class='check' src='/src/assets/img/common/uncheck.png'>
+			</div>
+			<div id='alipay' class='payType' style='display:none;' onclick='setCheck("0")'>
+				<img src='/src/assets/img/common/alipay.png'>
+				<span>支付宝支付</span>
+				<img class='check' src='/src/assets/img/common/uncheck.png'>
+			</div>
+		</div>
+		<div id='pay'>
+			<button onclick='pay()'></button>
+		</div>
+	</div>
+	<script type='text/javascript'>
+		CommonUtils.appendScript('/src/page/js/recovery/common.js', function() {
+			CommonUtils.appendScript('/src/page/js/recovery/service.js')
+		})
+	</script>
+</body>
+</html>

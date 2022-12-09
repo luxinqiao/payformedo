@@ -1,0 +1,65 @@
+<!--
+    文件描述：支付
+    创建人：赵志银
+    创建时间：2019-3-14
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name="x5-fullscreen" content="true">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<title></title>
+	<link rel='stylesheet' href='/src/assets/css/mall/common.css'>
+</head>
+<body>
+	<div id='main'>
+		<header>
+			<div class='back' onclick='CommonUtils.goBack()'>
+				<img src='/src/assets/img/common/back.png'/>
+			</div>
+			<span id='title'></span>
+		</header>
+		<div id='info' style='display:none;'>
+			<h1><p>支付金额：</p><p id='price' style='display:none;'></p></h1>
+			<dl id='goldcontent' style='display:none;'>
+				<dt>
+					<img src='/src/assets/img/common/logo.png'/>
+				</dt>
+				<dd>
+					<h2>余额支付</h2>
+					<p id="gold"></p>
+				</dd>
+				<dt>
+					<img src='/src/assets/img/common/no.png' id='goldCheck'  onclick='gCheck()'/>
+				</dt>
+			</dl>
+		</div>
+		<div id='payType' style='display:none;'>
+			<h1>请选用其他支付方式</h1>
+			<div id='wechatpay' class='payType' onclick='setCheck("1")'>
+				<img src='/src/assets/img/common/wechatpay.png'>
+				<span>微信支付</span>
+				<img class='check' src='/src/assets/img/common/uncheck.png'>
+			</div>
+			<div id='alipay' class='payType' onclick='setCheck("0")' style='display:none;'>
+				<img src='/src/assets/img/common/alipay.png'>
+				<span>支付宝支付</span>
+				<img class='check' src='/src/assets/img/common/uncheck.png'>
+			</div>
+		</div>
+		<div id='message' style='display:none;'>
+			<p id="wei">提示：开启余额支付后，优先扣取余额，余额不足时使用微信继续支付。</p>
+			<p id="ali" style='display:none;'>提示：开启余额支付后，优先扣取余额，余额不足时使用支付宝或微信继续支付。</p>
+		</div>
+		<div id='pay'>
+			<button onclick='pay()'></button>
+		</div>
+	</div>
+	<script type='text/javascript'>
+		CommonUtils.appendScript('/src/page/js/mall/common.js', function() {
+			CommonUtils.appendScript('/src/page/js/mall/product.js')
+		})
+	</script>
+</body>
+</html>

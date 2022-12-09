@@ -1,0 +1,20 @@
+//支付接口
+const pay_request = 'https://api-pay.wrightin.com/'
+//支付完跳转-上门产康
+const back_path_rv = 'https://pr.wrightin.com/#/'
+//支付完跳转-h5商场
+const back_path_wm = 'https://mall.wrightin.com/#/'
+
+// 极致学院
+const rih = 'https://api-lesson.wrightin.com/'
+const live = 'https://api-live.wrightin.com/'
+
+//页面根路径
+const page_root = {
+    app: '/src/page/app/',
+    error: '/src/sysPage/error/'
+}
+
+//友盟统计
+const cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://")
+document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1275548525'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275548525' type='text/javascript'%3E%3C/script%3E"));

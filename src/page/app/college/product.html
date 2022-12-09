@@ -1,0 +1,88 @@
+<!--
+    文件描述：支付-极致学院
+    创建人：赵志银
+    创建时间：2020-04-14
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name="x5-fullscreen" content="true">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<title></title>
+	<link rel='stylesheet' href='/src/assets/css/college/common.css'>
+</head>
+<body>
+	<div id='main'>
+		<header>
+			<div class='back' onclick='CommonUtils.goBack()'>
+				<img src='/src/assets/img/common/back.png'/>
+			</div>
+			<span id='title'></span>
+		</header>
+		<div id='info'>
+			<div>支付中心</div>
+			<div class='phone' id='phone'></div>
+			<div class='goods' id='goods' style='display:none;'>
+				<img src='/src/assets/img/common/logo.png' id='cover'>
+				<div>
+					<div class='name'>
+						<div class='goodsType goodsSpe' id='type'><div></div></div><span id='collegename'></span>
+					</div>
+					<div class='price' id='price'></div>
+				</div>
+			</div>
+			<div class='coupon' onclick='chooseCoupon()' id='couponBtn' style='display:none;'>
+				<div>优惠券</div>
+				<div id='coupon'></div>
+				<img src='/src/assets/img/college/next.png'>
+			</div>
+		</div>
+		<div id='payType' style='display:none;'>
+			<h1>支付方式</h1>
+			<div>
+				<div id='balance' class='balPay' onclick='gCheck()'>
+					<div id='balanceData'></div>
+					<img src='/src/assets/img/common/no.png' id='goldCheck'/>
+				</div>
+				<div id='wechatpay' class='payType' onclick='setCheck("1")'>
+					<img src='/src/assets/img/college/wechatpay.png'>
+					<span>微信支付</span>
+					<img class='check' src='/src/assets/img/college/yes.png'>
+				</div>
+			</div>
+		</div>
+		<div id='message' style='display:none;'>
+			<p>提示：</p>
+			<p>您所购买的商品为虚拟内容服务，购买后不支持退款、转让、退换。</p>
+			<p>购买后可在澜渟APP【我的-学习中心-已购课程】中查看。</p>
+			<p>开启余额支付后，优先扣取余额，余额不足时使用微信继续支付。</p>
+		</div>
+		<div id='pay'>
+			<div><span>应付：</span><span>¥</span><span id='payPrize'></span></div>
+			<button onclick='pay()'>确认支付</button>
+		</div>
+
+		<!-- 优惠券弹窗 -->
+		<div id='couponDialog' onclick='closeDialog()' style='display:none;' >
+			<div class='content'>
+				<div id='cont'>
+					<div>选择优惠券</div>
+					<div>
+						<div class='couponList' id='couponCont'></div>
+					</div>
+				</div>
+				
+				<div id='comBtn' onclick='complete()'>
+					<div>确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'>
+		CommonUtils.appendScript('/src/page/js/college/common.js', function() {
+			CommonUtils.appendScript('/src/page/js/college/product.js')
+		})
+	</script>
+</body>
+</html>

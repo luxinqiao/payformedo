@@ -1,0 +1,11 @@
+#main {
+    background-color: #fff;
+}
+#waitTip {
+    padding-top: 20px;
+    text-align: center;
+}
+#leftTime {
+    font-size: 18px;
+    color: #ff6666;
+}

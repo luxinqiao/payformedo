@@ -1,0 +1,31 @@
+<!--
+    文件描述：支付验证-极致学院
+    创建人：赵志银
+    创建时间：2020-04-17
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<title></title>
+	<link rel='stylesheet' href='/src/assets/css/recovery/common.css'>
+	<link rel='stylesheet' href='/src/assets/css/common/check.css'>
+</head>
+<body>
+	<div id='main'>
+		<header>
+			<div class='back' onclick='CommonUtils.goBack()'>
+				<img src='/src/assets/img/common/back.png'/>
+			</div>
+			<span id='title'></span>
+		</header>
+		<p id='waitTip'><font id='leftTime'>5</font>s 后为您跳转，请稍后...</p>
+	</div>
+	<script type='text/javascript'>
+		CommonUtils.appendScript('/src/page/js/college/common.js', function() {
+			CommonUtils.appendScript('/src/page/js/college/check.js')
+		})
+	</script>
+</body>
+</html>

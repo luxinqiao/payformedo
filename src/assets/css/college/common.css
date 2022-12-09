@@ -1,0 +1,420 @@
+/*
+ * 文件描述：支付-极致学院(css)
+ * 创建人：赵志银
+ * 创建时间：2020-04-14
+*/
+@media screen and (min-width: 240px) {html{font-size:65.75px;}}
+@media screen and (min-width: 320px) {html{font-size:85.33px;}}
+@media screen and (min-width: 360px) {html{font-size:96px;}}
+@media screen and (min-width: 375px) {html{font-size:100px;}}
+@media screen and (min-width: 400px) {html{font-size:106.67px;}}
+@media screen and (min-width: 414px) {html{font-size:110.4px;}}
+@media screen and (min-width: 440px) {html{font-size:117.33px;}}
+@media screen and (min-width: 480px) {html{font-size:128px;}}
+@media screen and (min-width: 520px) {html{font-size:138.67px;}}
+@media screen and (min-width: 540px) {html{font-size:144px;}}
+@media screen and (min-width: 560px) {html{font-size:149.33px;}}
+@media screen and (min-width: 600px) {html{font-size:160px;}}
+@media screen and (min-width: 640px) {html{font-size:170.67px;}}
+@media screen and (min-width: 680px) {html{font-size:181.33px;}}
+@media screen and (min-width: 720px) {html{font-size:192px;}}
+@media screen and (min-width: 750px) {html{font-size:200px;}}
+@media screen and (min-width: 760px) {html{font-size:202.67px;}}
+@media screen and (min-width: 800px) {html{font-size:213.33px;}}
+@media screen and (min-width: 960px) {html{font-size:256px;}}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family:  'Microsoft YaHei','微软雅黑';
+}
+body {
+    -webkit-tap-highlight-color:transparent;
+    background-color: #f8f8f8;
+}
+#main {
+    position: relative;
+    height: 100%;
+}
+#main.wechat>header {
+    display: none;
+}
+#main.browser {
+    padding-top: 44px;
+}
+#main.browser>header {
+    display: block;
+}
+header {
+    position: fixed;
+    top: 0; z-index: 1;
+    width: 100%; height: 0.44rem;
+    text-align: center; line-height: 0.44rem;
+    font-size: 0.16rem; font-weight: bold;
+    border-bottom: 1px solid #f8f8f8;
+    background-color: white; color: #000;
+}
+header>.back {
+    position: absolute;
+    left: 0;
+    height: 0.44rem;
+    padding: 0 0 0 0.2rem;
+    line-height: 0.44rem;
+    font-size: 0.16rem;
+    display: flex; justify-content: center; align-items: center;
+}
+header>.back>img {
+    width: 0.18rem; height: 0.18rem;
+}
+
+#info {
+    position: relative;
+    padding: 0.15rem 0.12rem 0 0.12rem;
+    background-color: #fff;
+}
+#info>div:nth-of-type(1) {
+    margin-bottom: 0.08rem;
+    height: 0.3rem;
+    line-height: 0.3rem; 
+    font-size: 0.22rem; font-weight: 500;
+}
+#info .phone {
+    margin-bottom: 0.13rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    font-size: 0.14rem; color: #666;
+}
+/* 商品信息 */
+#info .goods {
+    position: relative;
+    width: 100%; height: 1.07rem;
+}
+#info .goods img {
+    position: absolute;
+    top: 0.07rem; left: 0;
+    width: 0.84rem; height: 0.84rem;
+    border-radius: 0.04rem;
+}
+#info .goods>div {
+    position: absolute;
+    top: 0; right: 0;
+    padding-top: 0.07rem;
+    width: calc(100% - 0.96rem); height: 100%;
+}
+#info .goods>div .name {
+    width: 100%; max-height: 42px;
+    line-height: 21px;
+    display: -webkit-box;  
+    word-break: break-all;
+    text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;
+    -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-clamp: 2;
+}
+#info .goods .goodsType {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    margin: 2px 4px 0 0; 
+    vertical-align: top;
+    width: 28px; height: 16px;
+    border-radius: 2px;
+}
+#info .goods .goodsType>div {
+    font-size: 10px;
+}
+
+#info .goods>div:nth-of-type(1)>span:last-child {
+    font-size: 0.15rem;
+}
+#info .goods .price {
+    position: absolute;
+    bottom: 0.2rem; left: 0;
+    font-size: 0.16rem; font-weight: 500;
+}
+
+.goodsLess{
+    background:rgba(107,123,214,0.05);
+    border:1px solid rgba(107,123,214,0.3);
+}
+.goodsLess>div {
+    color:rgba(107,123,214,1);
+}
+.goodsSpe{
+    background:rgba(73,201,158,0.05);
+    border:1px solid rgba(73,201,158,0.3);
+}
+.goodsSpe>div {
+    color:#49C99E;
+}
+.goodsLive{
+    background:rgba(232,98,114,0.05);
+    border:1px solid rgba(232,98,114,0.3);
+}
+.goodsLive>div {
+    color:rgba(232,98,114,1);
+}
+
+/* 优惠券 */
+.coupon {
+    position: relative;
+    height: 0.44rem; width: 100%;
+    line-height: 0.44rem;
+    border-top: 1px solid #F4F4F4;
+}
+.coupon>div:nth-of-type(1) {
+    font-size: 0.14rem;
+}
+.coupon>div:nth-of-type(2) {
+    position: absolute;
+    top: 0; right: 0.13rem; bottom: 0;
+    margin: auto;
+    font-size: 0.14rem; color: #999;
+}
+.coupon>img {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    margin: auto;
+    width: 0.11rem; height: 0.11rem;
+}
+
+/* 支付方式 */
+#payType {
+    position: relative;
+}
+#payType>h1{
+    font-size: 0.11rem; font-weight: normal;
+    padding-left: 0.12rem;
+    text-align: left;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    color: #999; font-size: 0.14rem;
+}
+#payType>div {
+    position: relative;
+    padding-left: 0.12rem;
+    background-color: #fff;
+}
+#payType .balPay {
+    position: relative;
+    height: 0.54rem;
+    line-height: 0.54rem;
+    border-bottom: 1px solid #f8f8f8;
+    background-color: #fff;
+}
+#payType .balPay>div {
+    height: 0.54rem; line-height: 0.54rem;
+    font-size: 0.15rem;
+}
+#payType .balPay>img {
+    position: absolute;
+    top: 0; right: 0.14rem; bottom: 0;
+    margin: auto;
+    width: 0.38rem; height: 0.2rem;
+}
+#payType .payType {
+    position: relative;
+    height: 0.54rem;
+    border-bottom: 1px solid #f8f8f8;
+    background-color: #fff;
+}
+#payType .payType>img:nth-child(1) {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    margin: auto;
+    width: 0.26rem; height: 0.26rem;
+}
+#payType .payType>span:nth-child(2) {
+    position: absolute;
+    top: 0; left: 0.34rem; bottom: 0;
+    margin: auto;
+    height: 0.54rem;
+    line-height: 0.54rem;
+    font-size: 0.15rem;
+}
+#payType .payType>img:nth-child(3) {
+    position: absolute;
+    top: 0; right: 0.15rem; bottom: 0;
+    margin: auto;
+    width: 0.2rem; height: 0.2rem;
+}
+#message {
+    padding: 0.2rem 0.12rem 0.9rem 0.12rem; 
+}
+#message>p {
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    color: #999;
+}
+#pay {
+    position: fixed;
+    left: 0; right: 0; bottom: 0rem; z-index: 98;
+    width: 100%; height: 0.6rem;
+    background-color: #fff;
+}
+#pay>div {
+    padding: 0.09rem 0 0 0.12rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    box-sizing: content-box;
+}
+#pay>div>span:nth-of-type(1) {
+    font-size: 0.14rem;
+}
+#pay>div>span:nth-of-type(2) {
+    font-size: 0.16rem; color: #FF2B79;
+}
+#pay>div>span:nth-of-type(3) {
+    margin-left: 0.02rem;
+    font-size: 0.28rem; color: #FF2B79;
+}
+#pay>button {
+    position: absolute;
+    top: 0; bottom: 0; right: 0.12rem;
+    width: 1rem; height: 0.38rem;
+    margin: auto;
+    text-align: center; font-size: 0.16rem;
+    background-color: #d6d6d6; color: #fff;
+    border-radius: 0.19rem;
+}
+#pay>button.active {
+    background-color: #FF2B79;
+}
+
+/* 优惠券 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+#couponDialog {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+#cont {
+    position: absolute;
+    bottom: 0; left: 0;
+    max-height: 80%; width: 100%;
+    padding: 0 0 0.8rem 0;
+    background-color: #fff;
+}
+#cont>div:nth-of-type(1) {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 0.62rem;
+    padding-left: 0.12rem; 
+    line-height: 0.62rem;
+    font-size: 0.16rem; font-weight:500;
+    z-index: 2;
+    background-color: #fff;
+}
+#cont>div:nth-of-type(2) {
+    position: relative;
+    height: 3.75rem; width: 100%;
+    padding: 0.62rem 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.couponList {
+    padding: 0 0.16rem 0 0.16rem;
+    background-color: #fff;
+}
+.list {
+    position: relative;
+    margin-bottom: 0.2rem;
+    width: 100%; height: 1.04rem;
+    border: 1px solid #f6f6f6;
+    border-radius: 16rpx;
+    box-shadow: #f2f2f2 0 0 20px;
+}
+.list>.price {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1.3rem; height: 1.05rem;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+.list>.price>img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1.3rem; height: 1.05rem;
+}
+.list .price .num {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    height: 0.4rem; 
+    line-height: 0.4rem; text-align: center;
+    font-size: 0.4rem; color: #fff;
+}
+.list .price>div:nth-of-type(2) {
+    position: absolute;
+    left: 0; bottom: 0.12rem; right: 0;
+    height: 0.2rem; 
+    line-height: 0.2rem; text-align: center;
+    font-size: 0.12rem; color: #fff;
+}
+.list .info {
+    position: absolute;
+    top: 0; right: 0;
+    width: calc(100% - 1.3rem); height: 1.05rem;
+    padding: 0.2rem 0.16rem 0 0.15rem;
+}
+.list .name {
+    width: 100%; max-height: 0.4rem;
+    line-height: 0.2rem;
+    display: -webkit-box;  
+    word-break: break-all;
+    text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;
+    -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-clamp: 2;
+}
+.list .time {
+    position: absolute;
+    bottom: 0.17rem; left: 0.15rem;
+    font-size: 0.1rem; color: #999;
+}
+.list .info>img {
+    position: absolute;
+    bottom: 0.13rem; right: 0.2rem;
+    width: 0.2rem; height: 0.2rem;
+}
+
+#comBtn {
+    position: absolute;
+    bottom: 0; left: 0;
+    padding: 0 0.16rem;
+    width: 100%; height: 0.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+#comBtn>div {
+    width: 100%; height: 0.38rem;
+    background-color: #FF2C79;
+    border-radius: 0.19rem;
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 0.16rem; color: #fff;
+}
+
+.comeIn {
+    animation: dialogIn 0.3s linear normal forwards;
+}
+@keyframes dialogIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.comeOut {
+    animation: dialogOut 0.3s linear normal forwards;
+}
+@keyframes dialogOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
